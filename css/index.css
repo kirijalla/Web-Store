@@ -99,3 +99,44 @@ footer {
   background-color: #f1f1f1;
   margin-top: 20px;
 }
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left;
+  color: #ffffff;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.container img {
+  width: 300px;
+  height: 300px;
+  margin : 10px;
+}

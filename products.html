@@ -9,7 +9,8 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="images\logo.png" />
-    <link rel="stylesheet" href="css/index.css" />
+    
+    <link rel="stylesheet" href="css/products.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
@@ -32,13 +33,10 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html"
-              >Home</a
-            >
-            <a class="nav-link" href="products.html">Products</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" aria-current="page" href="products.html">Products</a>
             <a class="nav-link" href="cart.html">Cart</a>
             <a class="nav-link" href="checkout.html">Checkout</a>
-            <a class="nav-link" href="product-details.html">Product Details</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="login.html">Login</a>
@@ -48,5 +46,165 @@
         </div>
       </div>
     </nav>
+
+    <div class="container">
+      <div class="row" id="products">
+        <div class="card" style="width: 18rem">
+          <img src="images/barbie.webp" class="card-img-top" alt=""/>
+          <div class="card-body">
+            <h5 class="card-title">Barbie The Album (White) (Limited Edition) Vinyl [LP]</h5>
+            <p class="card-text">
+              $32.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(2)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/gorillaz.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Demon Days [2LP]</h5>
+            <p class="card-text">
+              $39.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(1)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/Homewrecker7.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Homewrecker LP</h5>
+            <p class="card-text">
+              $17.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(0)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/turntable.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">AT-LP70X</h5>
+            <p class="card-text">
+              $269.00
+            </p>
+            <button class="btn btn-primary"onclick="viewProductdetails(13)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/turntable2.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Hotaru</h5>
+            <p class="card-text">
+              $14,000.00
+            </p>
+            <button class="btn btn-primary"onclick="viewProductdetails(14)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/BEWITCHED.jpeg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">BEWITCHED LP</h5>
+            <p class="card-text">
+              $59.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(3)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="images/FUNNY-LITTLE-FEARS.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">FUNNY LITTLE FEARS LP</h5>
+            <p class="card-text">
+              $49.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(4)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/IRIS-OUT.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">IRIS OUT LP</h5>
+            <p class="card-text">
+              $37.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(5)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/LPFZSpotify.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">From Zero Spotify Fans First Vinyl [LP]</h5>
+            <p class="card-text">
+              $44.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(6)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/RUSH.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">RUSH LP</h5>
+            <p class="card-text">
+              $49.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(10)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/headphones.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ATH-M50xENSO</h5>
+            <p class="card-text">
+              $249.00
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(11)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/headphones2.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ATH-M50x</h5>
+            <p class="card-text">
+              $249.00
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(12)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/buble.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Christmas Green [LP + Exclusive Flexidisc]</h5>
+            <p class="card-text">
+              $37.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(7)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/mystical.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">American Heart - Galaxy Marble Spotify Fans First Vinyl [LP]</h5>
+            <p class="card-text">
+              $39.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(8)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="images/rosie.webp" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">ROSIE LP</h5>
+            <p class="card-text">
+              $39.99
+            </p>
+            <button class="btn btn-primary" onclick="viewProductdetails(9)" href="product-details.html">See Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/details.js"></script>
   </body>
 </html>

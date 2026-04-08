@@ -38,7 +38,6 @@
             <a class="nav-link" href="products.html">Products</a>
             <a class="nav-link" href="cart.html">Cart</a>
             <a class="nav-link" href="checkout.html">Checkout</a>
-            <a class="nav-link" href="product-details.html">Product Details</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="login.html">Login</a>
@@ -53,7 +52,7 @@
       <div class="hero-text">
         <h1>Vynil Store</h1>
         <p>Best vinyl records in town!</p>
-        <button> <a href="products.html">Shop Now</a> </button>
+        <button><a href="products.html">Shop Now</a></button>
       </div>
     </div>
 
@@ -83,15 +82,92 @@
       </div>
     </div>
 
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Show all
+      </button>
+      <button class="btn" onclick="filterSelection('vinyls')">Vinyls</button>
+      <button class="btn" onclick="filterSelection('turntables')">
+        Turntables
+      </button>
+      <button class="btn" onclick="filterSelection('headphones')">
+        Headphones
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="filterDiv vinyls">
+            <img src="images\Homewrecker7.webp" alt="Vinyl 1" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv turntables">
+            <img src="images\turntable.webp" alt="Turntable 1" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv vinyls">
+            <img src="images\gorillaz.webp" alt="Vinyl 3" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv vinyls">
+            <img src="images\LPFZSpotify.webp" alt="Vinyl 4" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv vinyls">
+            <img src="images\barbie.webp" alt="Vinyl 2" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv turntables">
+            <img src="images\turntable2.webp" alt="Turntable 2" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv headphones">
+            <img src="images\headphones.webp" alt="Headphones 1" />
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="filterDiv headphones">
+            <img src="images\headphones2.webp" alt="Headphones 2" />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="slides-container">
-        <div class="slide"> <img src="images\turntable.jpeg" alt="Slide 1" height="360px" width="100%"/> </div>
-        <div class="slide"> <img src="images\turntable2.jpeg" alt="Slide 2" height="360px" width="100%"/> </div>
-        <div class="slide"> <img src="images\turntable3.jpg" alt="Slide 3" height="360px" width="100%"/> </div>
+      <div class="slide">
+        <img
+          src="images\turntable.jpeg"
+          alt="Slide 1"
+          height="360px"
+          width="100%"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images\turntable2.jpeg"
+          alt="Slide 2"
+          height="360px"
+          width="100%"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images\turntable3.jpg"
+          alt="Slide 3"
+          height="360px"
+          width="100%"
+        />
+      </div>
       <button id="prev" onclick="plusSlides(-1)">←</button>
       <button id="next" onclick="plusSlides(1)">→</button>
     </div>
-
 
     <script src="js/index.js"></script>
 
