@@ -32,21 +32,83 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html"
-              >Home</a
-            >
+            <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="products.html">Products</a>
             <a class="nav-link" href="cart.html">Cart</a>
             <a class="nav-link" href="checkout.html">Checkout</a>
-            <a class="nav-link" href="product-details.html">Product Details</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="login.html">Login</a>
-            <a class="nav-link" href="register.html">Register</a>
+            <a class="nav-link active" aria-current="page" href="register.html"
+              >Register</a
+            >
             <a class="nav-link" href="profile.html">Profile</a>
+            <button class="btn btn-outline-secondary ms-auto" id="dark-toggle">
+              Dark Mode
+            </button>
           </div>
         </div>
       </div>
     </nav>
+    <h2>Registration Form</h2>
+
+    <form id="regForm">
+      Name: <input type="text" id="name" /><br /><br />
+      Age: <input type="number" id="age" /><br /><br />
+
+      Gender:
+      <input type="radio" name="gender" value="Male" /> Male
+      <input type="radio" name="gender" value="Female" /> Female <br /><br />
+
+      Hobbies:
+      <input type="checkbox" value="Reading" /> Reading
+      <input type="checkbox" value="Sports" /> Sports
+      <input type="checkbox" value="Music" /> Music <br /><br />
+
+      Country:
+      <select id="country">
+        <option value="Canada">Canada</option>
+        <option value="USA">USA</option>
+      </select>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="result"></p>
+    <script>
+      document
+        .getElementById("regForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let name = document.getElementById("name").value;
+          let age = document.getElementById("age").value;
+
+          let gender = document.querySelector(
+            'input[name="gender"]:checked',
+          ).value;
+
+          let hobies = [];
+          document
+            .querySelectorAll('input[type="checkbox"]:checked')
+            .forEach((c) => {
+              hobies.push(c.value);
+            });
+
+          let country = document.getElementById("country").value;
+
+          let output = `
+                Name  : ${name} <br>
+                Age : ${age} <br>
+                Gender : ${gender} <br>
+                Hobies : ${hobies.join(" , ")} <br>
+                Country : ${country}
+            `;
+
+          document.getElementById("result").innerHTML = output;
+        });
+    </script>
+    <script src="js/darkmode.js"></script>
   </body>
 </html>

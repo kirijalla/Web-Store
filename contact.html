@@ -32,22 +32,67 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html"
-              >Home</a
-            >
+            <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="products.html">Products</a>
             <a class="nav-link" href="cart.html">Cart</a>
             <a class="nav-link" href="checkout.html">Checkout</a>
-            <a class="nav-link" href="product-details.html">Product Details</a>
             <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link active" aria-current="page" href="contact.html"
+              >Contact</a
+            >
             <a class="nav-link" href="login.html">Login</a>
             <a class="nav-link" href="register.html">Register</a>
             <a class="nav-link" href="profile.html">Profile</a>
+            <button class="btn btn-outline-secondary ms-auto" id="dark-toggle">Dark Mode</button>
           </div>
         </div>
       </div>
     </nav>
-  
+
+    <div class="container mt-4" style="max-width: 600px">
+      <h2>Contact Us</h2>
+
+      <div id="contact-form">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="contact-name"
+            placeholder="Your name"
+          />
+          <span class="text-danger" id="name-error"></span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="contact-email"
+            placeholder="you@email.com"
+          />
+          <span class="text-danger" id="email-error"></span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            id="contact-message"
+            rows="4"
+            placeholder="Your message..."
+          ></textarea>
+          <span class="text-danger" id="message-error"></span>
+        </div>
+        <button class="btn btn-primary" id="send-btn">Send Message</button>
+      </div>
+
+      <div id="success-msg" style="display: none">
+        <h4 class="text-success">Message sent successfully!</h4>
+        <p>Thanks for reaching out. We'll get back to you soon.</p>
+      </div>
+    </div>
+
+    <script src="js/contact.js"></script>
+    <script src="js/darkmode.js"></script>
   </body>
 </html>

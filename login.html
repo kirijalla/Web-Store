@@ -32,21 +32,59 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="index.html"
-              >Home</a
-            >
+            <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="products.html">Products</a>
             <a class="nav-link" href="cart.html">Cart</a>
             <a class="nav-link" href="checkout.html">Checkout</a>
-            <a class="nav-link" href="product-details.html">Product Details</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="contact.html">Contact</a>
-            <a class="nav-link" href="login.html">Login</a>
+            <a class="nav-link active" aria-current="page" href="login.html"
+              >Login</a
+            >
             <a class="nav-link" href="register.html">Register</a>
             <a class="nav-link" href="profile.html">Profile</a>
+            <button class="btn btn-outline-secondary ms-auto" id="dark-toggle">
+              Dark Mode
+            </button>
           </div>
         </div>
       </div>
     </nav>
+
+    <form id="loginForm">
+      <label>UserName:</label>
+      <input type="text" id="username" /><br /><br />
+      <label>Password:</label>
+      <input type="password" id="password" /><br /><br />
+      <button type="submit">Login</button>
+    </form>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          //prevent my page keep loading.
+          event.preventDefault();
+
+          let usern = document.getElementById("username").value;
+          let pass = document.getElementById("password").value;
+
+          //alert("hello  " + usern);
+
+          console.log("the user name is " + usern);
+          console.log("the pass is  " + pass);
+        });
+    </script>
+
+    <input type="text" id="myinput" placeholder="Put your name" />
+    <p id="result"></p>
+
+    <script>
+      let input = document.getElementById("myinput");
+
+      input.addEventListener("input", function () {
+        document.getElementById("result").textContent = "Helloo " + input.value;
+      });
+    </script>
+    <script src="js/darkmode.js"></script>
   </body>
 </html>
