@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -25,7 +26,8 @@ body, html {
   font-size: 24px;
 }
 
-#prev, #next {
+#prev,
+#next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -36,11 +38,17 @@ body, html {
   height: 36px;
 }
 
-#prev { left: 12px; }
-#next { right: 12px; }
+#prev {
+  left: 12px;
+}
+#next {
+  right: 12px;
+}
 
-.hero-image { 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/vinyls.jpg');
+.hero-image {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/vinyls.jpg");
 
   height: 50%;
 
@@ -81,7 +89,6 @@ body, html {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
- 
 }
 .product-item {
   width: 40%;
@@ -127,40 +134,34 @@ footer {
 }
 
 .btn:hover {
-  background-color: #ddd;
+  background-color: #36d5f1;
 }
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-
 .container img {
   width: 300px;
   height: 300px;
-  margin : 10px;
+  margin: 10px;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+#myBtnContainer {
+  text-align: center;
+  margin-bottom: 20px;
+  justify-content: center;
+  padding: 30px;
+  background-color: aliceblue;
 }
 
-body.dark-mode .navbar,
-body.dark-mode .card,
-body.dark-mode .container {
-  background-color: #1e1e1e !important;
-  color: #f1f1f1 !important;
-}
-
-#dark-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
+#myBtnContainer .btn {
+  padding: 20px 30px;
   background-color: #555;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+}
+#myBtnContainer .btn.active {
+  background-color: #36d5f1;
 }

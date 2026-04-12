@@ -4,34 +4,14 @@
 }
 
 .Details {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding: 20px;
 }
 .image {
-    margin: 20px;
+  margin: 20px;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #f1f1f1;
-}
 
-body.dark-mode .navbar,
-body.dark-mode .card,
-body.dark-mode .container {
-  background-color: #1e1e1e !important;
-  color: #f1f1f1 !important;
-}
-#dark-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: #555;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+

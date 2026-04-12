@@ -43,7 +43,6 @@
             <a class="nav-link" href="login.html">Login</a>
             <a class="nav-link" href="register.html">Register</a>
             <a class="nav-link" href="profile.html">Profile</a>
-            <button class="btn btn-outline-secondary ms-auto" id="dark-toggle">Dark Mode</button>
           </div>
         </div>
       </div>
@@ -62,22 +61,22 @@
       <div class="product-list">
         <div class="product-item">
           <img src="images\IRIS-OUT.jpg" alt="Product 1" />
-          <h3>Iris Out Vynil</h3>
+          <h3> <a onclick="viewProductdetails(5)" href="product-details.html">Iris Out Vynil</a></h3>
           <p>$39.99</p>
         </div>
         <div class="product-item">
           <img src="images\RUSH.jpg" alt="Product 2" />
-          <h3>Rush Vynil</h3>
+          <h3> <a onclick="viewProductdetails(10)" href="product-details.html">Rush Vynil</a></h3>
           <p>$49.99</p>
         </div>
         <div class="product-item">
           <img src="images\FUNNY-LITTLE-FEARS.jpg" alt="Product 3" />
-          <h3>Funny Little Fears Vynil</h3>
+          <h3> <a onclick="viewProductdetails(4)" href="product-details.html">Funny Little Fears Vynil</a></h3>
           <p>$49.99</p>
         </div>
         <div class="product-item">
           <img src="images\BEWITCHED.jpeg" alt="Product 4" />
-          <h3>Bewitched Vynil</h3>
+          <h3> <a onclick="viewProductdetails(3)" href="product-details.html">Bewitched Vynil</a></h3>
           <p>$59.99</p>
         </div>
       </div>
@@ -171,10 +170,11 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script src="js/details.js"></script>
 
     <footer>
       <p>&copy; 2026 Vynil Store. All rights reserved.</p>
     </footer>
-    <script src="js/darkmode.js"></script>
+
   </body>
 </html>
