@@ -1,22 +1,25 @@
-
 if (document.getElementsByClassName("slide").length > 0) {
   let slideIndex = 1;
   showSlides(slideIndex);
 
   function plusSlides(n) {
-    showSlides(slideIndex += n);
+    showSlides((slideIndex += n));
   }
 
   function currentSlide(n) {
-    showSlides(slideIndex = n);
+    showSlides((slideIndex = n));
   }
 
   function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slide");
     let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1; }
-    if (n < 1) { slideIndex = slides.length; }
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
@@ -57,16 +60,16 @@ if (document.getElementsByClassName("filterDiv").length > 0) {
     }
     element.className = arr1.join(" ");
   }
-}
 
-if (document.getElementById("myBtnContainer")) {
-  var btnContainer = document.getElementById("myBtnContainer");
-  var btns = btnContainer.getElementsByClassName("btn");
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
+  if (document.getElementById("myBtnContainer")) {
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
   }
 }
