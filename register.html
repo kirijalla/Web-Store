@@ -47,64 +47,59 @@
         </div>
       </div>
     </nav>
-    <h2>Registration Form</h2>
 
-    <form id="regForm">
-      Name: <input type="text" id="name" /><br /><br />
-      Age: <input type="number" id="age" /><br /><br />
+    <div class="container mt-4" style="max-width: 600px">
+      <h2>Registration</h2>
 
-      Gender:
-      <input type="radio" name="gender" value="Male" /> Male
-      <input type="radio" name="gender" value="Female" /> Female <br /><br />
+      <div id="regForm">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Your name"
+          />
+          <span class="text-danger" id="name-error"></span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="you@email.com"
+          />
+          <span class="text-danger" id="email-error"></span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Create a password..."
+          />
+          <span class="text-danger" id="password-error"></span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirm_password"
+            placeholder="Confirm your password..."
+          />
+          <span class="text-danger" id="confirm-password-error"></span>
+        </div>
+        <button class="btn btn-primary" id="send-btn">Register</button>
+      </div>
 
-      Hobbies:
-      <input type="checkbox" value="Reading" /> Reading
-      <input type="checkbox" value="Sports" /> Sports
-      <input type="checkbox" value="Music" /> Music <br /><br />
-
-      Country:
-      <select id="country">
-        <option value="Canada">Canada</option>
-        <option value="USA">USA</option>
-      </select>
-      <br /><br />
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <p id="result"></p>
-    <script>
-      document
-        .getElementById("regForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          let name = document.getElementById("name").value;
-          let age = document.getElementById("age").value;
-
-          let gender = document.querySelector(
-            'input[name="gender"]:checked',
-          ).value;
-
-          let hobies = [];
-          document
-            .querySelectorAll('input[type="checkbox"]:checked')
-            .forEach((c) => {
-              hobies.push(c.value);
-            });
-
-          let country = document.getElementById("country").value;
-
-          let output = `
-                Name  : ${name} <br>
-                Age : ${age} <br>
-                Gender : ${gender} <br>
-                Hobies : ${hobies.join(" , ")} <br>
-                Country : ${country}
-            `;
-
-          document.getElementById("result").innerHTML = output;
-        });
-    </script>
+      <div id="success-msg" style="display: none">
+        <h4 class="text-success">Registration successful!</h4>
+        <p>Thanks for registering. You can now log in.</p>
+      </div>
+    </div>
+    <script src="js/register.js"></script> </script>
   </body>
 </html>

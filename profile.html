@@ -32,9 +32,7 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="index.html"
-              >Home</a
-            >
+            <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link" href="products.html">Products</a>
             <a class="nav-link" href="cart.html">Cart</a>
             <a class="nav-link" href="checkout.html">Checkout</a>
@@ -42,10 +40,37 @@
             <a class="nav-link" href="contact.html">Contact</a>
             <a class="nav-link" href="login.html">Login</a>
             <a class="nav-link" href="register.html">Register</a>
-            <a class="nav-link active" aria-current="page" href="profile.html">Profile</a>
+            <a class="nav-link active" aria-current="page" href="profile.html"
+              >Profile</a
+            >
           </div>
         </div>
       </div>
     </nav>
+
+    <div class="container mt-1">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card text-center p-4">
+            <div>
+              <img
+                src="images/andres.jpeg"
+                alt="Andres"
+                class="rounded-circle bg-secondary mx-auto mb-1"
+                style="width: 80px; height: 80px"
+              />
+            </div>
+            <h5 class="card-title" id="name"></h5>
+            <h4 class="card-text" id="email"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+     let account = JSON.parse(localStorage.getItem("account"));
+      document.getElementById("name").textContent = account.name;
+      document.getElementById("email").textContent = account.email;
+    </script>
   </body>
 </html>

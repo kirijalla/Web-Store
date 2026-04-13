@@ -48,39 +48,38 @@
       </div>
     </nav>
 
-    <form id="loginForm">
-      <label>UserName:</label>
-      <input type="text" id="username" /><br /><br />
-      <label>Password:</label>
-      <input type="password" id="password" /><br /><br />
-      <button type="submit">Login</button>
-    </form>
-    <script>
-      document
-        .getElementById("loginForm")
-        .addEventListener("submit", function (event) {
-          //prevent my page keep loading.
-          event.preventDefault();
+    <div class="container mt-4" style="max-width: 600px">
+      <h2>Login</h2>
 
-          let usern = document.getElementById("username").value;
-          let pass = document.getElementById("password").value;
+      <div id="LogInForm">
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="you@email.com"
+          />
+          <span class="text-danger" id="email-error"></span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <span class="text-danger" id="password-error"></span>
+        </div>
+        <button class="btn btn-primary" id="send-btn">Log In</button>
+      </div>
 
-          //alert("hello  " + usern);
-
-          console.log("the user name is " + usern);
-          console.log("the pass is  " + pass);
-        });
-    </script>
-
-    <input type="text" id="myinput" placeholder="Put your name" />
-    <p id="result"></p>
-
-    <script>
-      let input = document.getElementById("myinput");
-
-      input.addEventListener("input", function () {
-        document.getElementById("result").textContent = "Helloo " + input.value;
-      });
-    </script>
+      <div id="success-msg" style="display: none">
+        <h4 class="text-success">Login successful!</h4>
+        <p>Welcome back!</p>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
   </body>
 </html>
