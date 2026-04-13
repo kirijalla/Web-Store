@@ -166,3 +166,8 @@ a:hover {
     height: auto;
   }
 }
+
+footer a {
+  text-decoration: none !important;
+  cursor: default;
+}
