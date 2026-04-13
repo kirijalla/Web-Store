@@ -1,5 +1,5 @@
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart"));
 let summaryEl = document.getElementById("order-summary");
 let totalEl = document.getElementById("order-total");
 

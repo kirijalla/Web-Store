@@ -1,4 +1,5 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let cart = JSON.parse(localStorage.getItem("cart"));
+let summaryEl = document.getElementById("order-summary");
 let cartContainer = document.getElementById("cart-container");
 let totalEl = document.getElementById("cart-total");
 
@@ -34,7 +35,7 @@ function renderCart() {
     cartContainer.appendChild(cartItem);
   });
 
-  document.querySelectorAll(".qty-input").forEach(input => {
+  document.querySelectorAll(".qty-input").forEach((input) => {
     input.addEventListener("input", (e) => {
       let index = e.target.getAttribute("data-index");
       cart[index].quantity = parseInt(e.target.value) || 1;
@@ -43,7 +44,7 @@ function renderCart() {
     });
   });
 
-  document.querySelectorAll(".remove-btn").forEach(button => {
+  document.querySelectorAll(".remove-btn").forEach((button) => {
     button.addEventListener("click", (e) => {
       let index = e.target.getAttribute("data-index");
       cart.splice(index, 1);
@@ -54,5 +55,15 @@ function renderCart() {
 
   totalEl.textContent = "$" + getTotal().toFixed(2);
 }
+
+let total = 0;
+cart.forEach((item) => {
+  let price = parseFloat(item.price.replace(/[$,]/g, ""));
+  total += price * item.quantity;
+  let div = document.createElement("div");
+  div.innerHTML = `<p>${item.name} x${item.quantity} — $${(price * item.quantity).toFixed(2)}</p>`;
+  summaryEl.appendChild(div);
+});
+totalEl.textContent = "$" + total.toFixed(2);
 
 renderCart();
